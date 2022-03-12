@@ -183,6 +183,10 @@ async def group(client, message):
             [InlineKeyboardButton('⚡ Join For New Movies ⚡', url=f'{TRIAL3}')]
 
         )
+
+
+
+
         poster=None
         if API_KEY:
             poster=await get_poster(search)
