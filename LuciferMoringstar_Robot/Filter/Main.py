@@ -186,7 +186,6 @@ async def group(client, message):
 
 
 
-
         poster=None
         if API_KEY:
             poster=await get_poster(search)
