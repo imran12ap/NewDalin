@@ -81,6 +81,11 @@ async def filter(client, message):
             buttons.append(
                 [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
             )
+            buttons.append(
+
+            [InlineKeyboardButton('⚡ Join For New Movies ⚡', url=f'{TRIAL3}')]
+
+            )
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
@@ -99,6 +104,10 @@ async def filter(client, message):
         )    
         buttons.append(
             [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+        )
+        buttons.append(
+
+            [InlineKeyboardButton('⚡ Join For New Movies ⚡', url=f'{TRIAL3}')]
         )
         poster=None
         if API_KEY:
@@ -146,6 +155,11 @@ async def group(client, message):
             buttons.append(
                 [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
             )
+            buttons.append(
+
+            [InlineKeyboardButton('⚡ Join For New Movies ⚡', url=f'{TRIAL3}')]
+
+            )
             poster=None
             if API_KEY:
                 poster=await get_poster(search)
@@ -163,6 +177,11 @@ async def group(client, message):
         )    
         buttons.append(
             [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+        )
+        buttons.append(
+
+            [InlineKeyboardButton('⚡ Join For New Movies ⚡', url=f'{TRIAL3}')]
+
         )
         poster=None
         if API_KEY:
@@ -217,7 +236,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons.append(
                     [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
+                buttons.append(
 
+                    [InlineKeyboardButton('⚡ Join For New Movies ⚡', url=f'{TRIAL3}')]
+
+                )
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
@@ -231,7 +254,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons.append(
                     [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
+                buttons.append(
 
+                    [InlineKeyboardButton('⚡ Join For New Movies ⚡', url=f'{TRIAL3}')]
+
+                )
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
@@ -255,6 +282,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons.append(
                     [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
                 )
+                buttons.append(
+
+                    [InlineKeyboardButton('⚡ Join For New Movies ⚡', url=f'{TRIAL3}')]
+
+                )
 
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
@@ -269,7 +301,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 buttons.append(
                     [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
                 )
+                buttons.append(
 
+                    [InlineKeyboardButton('⚡ Join For New Movies ⚡', url=f'{TRIAL3}')]
+
+                )
+                
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
